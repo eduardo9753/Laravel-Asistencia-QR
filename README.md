@@ -1,6 +1,6 @@
 # Asistencia de Trabajadores
 
-Sistema Web para el registro y controld de trabajadores.
+Sistema Web para el registro y control de trabajadores.
 
 Construida en laravel 8, bootstrap CSS y Base de Datos MySql.
 
