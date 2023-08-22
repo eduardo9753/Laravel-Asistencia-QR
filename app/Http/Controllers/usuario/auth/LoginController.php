@@ -22,7 +22,7 @@ class LoginController extends Controller
         ]);
 
         //autenticacion con la base de datos
-        if (!auth()->attempt($request->only('enail', 'password'), $request->remember)) {
+        if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
             return back()->with('mensaje', 'Revisa nuevamente sus credenciales :)');
         }
 
