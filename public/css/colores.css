@@ -1,0 +1,7 @@
+:root {
+    --blanco : #fff;
+    --negro : #000;
+    --verde : #01c911;
+    --general : rgb(43, 196, 138);
+    --generalTransparente : rgba(43, 196, 138,0.2);
+}
