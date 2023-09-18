@@ -33,4 +33,7 @@
             </div>
         </div>
     </section>
+
+    <!--Archivo js para activar la camara que va escanear el QR-->
+    <script src="{{ asset('js/asistenciaQR.js') }}"></script>
 @endsection

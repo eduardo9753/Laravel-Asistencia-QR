@@ -23,16 +23,16 @@
     <link rel="stylesheet" href="{{ asset('css/colores.css') }}">
     <link rel="stylesheet" href="{{ asset('css/generales.css') }}">
     <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
-    
+
 
     {{-- link css usuario --}}
-    
+
 
     {{-- link css trabajador --}}
-   
+
 
     {{-- lisk css responsive --}}
-   
+
 
 
     <!-- Boxicons CSS -->
@@ -78,9 +78,17 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
-    
+    <!--LIBRERIA INSTANCAM.JS-->
     <script src="{{ asset('js/instascan.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <!--LIBRERIA MOMENT.JS-->
+    <script src="{{ asset('lib/moment/moment.js') }}"></script>
+    <!--LIBRERIA FullCalendar-->
+    <script src="{{ asset('lib/fullcalendar-6.1.8/dist/index.global.js') }}"></script>
+
+
+    <!--ARCHIVOS JS-->
+    <!--<script src="{{ asset('js/asistenciaQR.js') }}"></script>-->
+    
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

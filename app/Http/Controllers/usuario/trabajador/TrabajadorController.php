@@ -16,9 +16,22 @@ class TrabajadorController extends Controller
     {
         $departaments = Department::all();
         $positions = Position::all();
+        $employees = Employee::join('departments', 'departments.id', '=', 'employees.departament_id')
+            ->join('positions', 'positions.id', '=', 'employees.position_id')
+            ->select(
+                'employees.id',
+                'employees.nombres',
+                'employees.apellidos',
+                'employees.documento',
+                'employees.edad',
+                'departments.nombre as nombreDepartamento',
+                'positions.nombre as nombrePosicion'
+            )
+            ->get();
         return view('usuario.trabajador.index', [
             'departaments' => $departaments,
-            'positions' => $positions
+            'positions' => $positions,
+            'employees' => $employees
         ]);
     }
 

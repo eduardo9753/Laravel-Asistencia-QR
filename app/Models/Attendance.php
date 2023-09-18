@@ -18,4 +18,9 @@ class Attendance extends Model
         'employee_id',
         'user_id'
     ];
+
+    protected $casts = [
+        'fecha_ingreso' => 'date_format:d/m/yyyy',
+        'fecha_salida' => 'date_format:d/m/yyyy',
+    ];
 }

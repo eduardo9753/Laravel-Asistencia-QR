@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\trabajador\home\HomeController;
+use App\Http\Controllers\usuario\asistencia\AsistenciaController;
 use App\Http\Controllers\usuario\auth\LoginController;
 use App\Http\Controllers\usuario\auth\RegisterController;
 use App\Http\Controllers\usuario\departamento\DepartamentoController;
@@ -22,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 //trabajador
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/trabajador/fetch',[HomeController::class, 'fetchTrabajador'])->name('trabajador.fetch');
+Route::get('/trabajador/fetch', [HomeController::class, 'fetchTrabajador'])->name('trabajador.fetch');
 
 
 
@@ -38,7 +39,7 @@ Route::post('/register/singIn', [RegisterController::class, 'store'])->name('reg
 Route::get('/menu', [MenuController::class, 'index'])->name('usuario.menu.index');
 
 Route::get('/menu/usuario/departamento', [DepartamentoController::class, 'index'])->name('usuario.departamento.index');
-Route::post('/menu/usuario/departamento/store',[DepartamentoController::class, 'store'])->name('usuario.departamento.store');
+Route::post('/menu/usuario/departamento/store', [DepartamentoController::class, 'store'])->name('usuario.departamento.store');
 
 Route::get('/menu/usuario/posicion', [PosicionController::class, 'index'])->name('usuario.posicion.index');
 Route::post('/menu/usuario/posicion/store', [PosicionController::class, 'store'])->name('usuario.posicion.store');
@@ -47,6 +48,5 @@ Route::get('/menu/usuario/trabajador', [TrabajadorController::class, 'index'])->
 Route::post('/menu/usuario/trabajador/store', [TrabajadorController::class, 'store'])->name('usuario.trabajdor.store');
 
 
-
-
-
+Route::get('/menu/usuario/trabajador/asistencia/{id}', [AsistenciaController::class, 'index'])->name('usuario.asistencia.index');
+Route::get('/menu/usuario/trabajador/asistencia/show/{id}', [AsistenciaController::class, 'show'])->name('usuario.asistencia.show');

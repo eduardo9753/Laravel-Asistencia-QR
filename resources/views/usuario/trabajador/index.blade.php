@@ -108,16 +108,21 @@
                                         <th scope="col">Nombre</th>
                                         <th scope="col">Departamento</th>
                                         <th scope="col">Posicion</th>
+                                        <th scope="col">Asistencia</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    @foreach ($employees as $employee)
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>{{ $employee->apellidos }}</td>
+                                            <td>{{ $employee->nombreDepartamento }}</td>
+                                            <td>{{ $employee->nombrePosicion }}</td>
+                                            <td>
+                                                <a href="{{ route('usuario.asistencia.index', ['id'=>$employee->id]) }}">Ver</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
